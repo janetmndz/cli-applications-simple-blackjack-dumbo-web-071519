@@ -55,10 +55,12 @@ def runner
   display_card_total(next_hand)
   
   while playing 
-    
+    next_hand = hit?(current_hand)
+    display_card_total(next_hand)
     if next_hand > 21
-    playing = false
-    end_game(next_hand)
+      playing = false
+      end_game(next_hand)
+    end
   end
 end
     
