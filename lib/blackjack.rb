@@ -49,7 +49,7 @@ end
 
 def runner
   welcome
-  current hand = initial_round
+  current_hand = initial_round
   next_hand = hit?(current_hand)
   display_card_total(next_hand)
   if next_hand > 21
