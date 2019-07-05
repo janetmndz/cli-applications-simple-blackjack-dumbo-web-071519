@@ -49,11 +49,16 @@ end
 
 def runner
   welcome
+  playing = true
   current_hand = initial_round
   next_hand = hit?(current_hand)
   display_card_total(next_hand)
-  if next_hand > 21
-  end_game(next_hand)
+  
+  while playing 
+    
+    if next_hand > 21
+    playing = false
+    end_game(next_hand)
   end
 end
     
